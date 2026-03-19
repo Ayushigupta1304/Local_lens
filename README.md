@@ -14,8 +14,8 @@ It includes:
 **Ayushi Gupta** - Backend & Database<br>
 **Lakshika** - Backend <br>
 **Khushi Kankheria** - Frontend ( User Dashboard & Admin Dashboard) <br>
-**Hemlata** - Frontend ( User Dashboard - Features add)
-**Divya Verma** - Frontend ( User Dashboard - Features add)<br>
+**Hemlata** - Frontend ( User Dashboard - Features add)<br>
+**Divya Verma**- Frontend ( User Dashboard - Features add)<br>
 
 
 ## Features
