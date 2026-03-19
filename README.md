@@ -76,26 +76,8 @@ npm run start
 - **Authentication**: Supabase Auth
 - **File Storage**: Supabase Storage
 
-## Project Structure
 
 ```
-app/                    # App Router pages
-components/             # React components
-lib/                    # Utilities and types
-  ├── supabase/        # Supabase clients
-  ├── types.ts         # TypeScript types
-  └── env.ts           # Environment setup
-supabase/               # Database schema and seed data
-```
-
-## Routes
-
-- `/` - Browse businesses (homepage)
-- `/login` - User login
-- `/signup` - User registration
-- `/business/[id]` - Business details and reviews
-- `/admin` - Admin dashboard (admin only)
-
 ## Key Components
 
 - **HomePage** - Business browsing with filters
