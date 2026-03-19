@@ -2,6 +2,15 @@
 
 **LocalLens** is a crowdsourced review platform for local businesses. Users can browse businesses by category and location, submit reviews with quality/service/value ratings and optional photos, while admins approve reviews before they're published.
 
+# Contributors 
+
+**Ayushi Gupta** - Backend & Database
+**Lakshika** - Backend 
+**Khushi Kankheria** - Frontend ( User Dashboard & Admin Dashboard)
+**Divya Verma** - Frontend ( User Dashboard - Features add)
+**Hemlata** - Frontend ( User Dashboard - Features add)
+
+
 ## Features
 
 **Browse Local Businesses** - Search, filter by category and location
