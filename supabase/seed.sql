@@ -1,5 +1,3 @@
--- Seed data for LocalLens (optional)
--- Run after schema.sql
 
 insert into public.businesses (name, category, location, short_description, address_line)
 values
