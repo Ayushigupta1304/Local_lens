@@ -4,10 +4,10 @@
 
 # Contributors 
 
-**Ayushi Gupta** - Backend & Database
-**Lakshika** - Backend 
-**Khushi Kankheria** - Frontend ( User Dashboard & Admin Dashboard)
-**Divya Verma** - Frontend ( User Dashboard - Features add)
+**Ayushi Gupta** - Backend & Database<br>
+**Lakshika** - Backend <br>
+**Khushi Kankheria** - Frontend ( User Dashboard & Admin Dashboard) <br>
+**Divya Verma** - Frontend ( User Dashboard - Features add)<br>
 **Hemlata** - Frontend ( User Dashboard - Features add)
 
 
