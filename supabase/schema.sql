@@ -1,8 +1,3 @@
--- LocalLens (crowdsourced review) schema for Supabase Postgres
--- Run this in the Supabase SQL editor.
-
--- 1) Tables
-
 create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   email text unique,
@@ -39,7 +34,7 @@ create table if not exists public.reviews (
 create index if not exists reviews_business_status_created_idx
   on public.reviews (business_id, status, created_at desc);
 
--- 2) Profile bootstrap on signup
+
 create or replace function public.handle_new_user()
 returns trigger
 language plpgsql
@@ -59,7 +54,7 @@ create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
 
--- 3) Aggregation view (approved reviews only)
+
 create or replace view public.business_ratings as
 select
   b.id as business_id,
@@ -85,12 +80,11 @@ select
 from public.businesses b
 join public.business_ratings br on br.business_id = b.id;
 
--- 4) RLS
 alter table public.profiles enable row level security;
 alter table public.businesses enable row level security;
 alter table public.reviews enable row level security;
 
--- Profiles: user can read/update own profile
+
 drop policy if exists "profiles read own" on public.profiles;
 create policy "profiles read own"
   on public.profiles for select
@@ -102,8 +96,8 @@ create policy "profiles update own"
   using (auth.uid() = id)
   with check (auth.uid() = id);
 
--- Businesses: anyone can read; only admins can write (update/delete)
--- Note: Insert is public to allow seeding via server-side initialization
+
+
 drop policy if exists "businesses public read" on public.businesses;
 create policy "businesses public read"
   on public.businesses for select
@@ -131,8 +125,7 @@ create policy "businesses admin delete"
     exists (select 1 from public.profiles p where p.id = auth.uid() and p.role = 'admin')
   );
 
--- Reviews: public can only read approved; authenticated users can create pending;
--- admins can read all and update status.
+
 drop policy if exists "reviews public read approved" on public.reviews;
 create policy "reviews public read approved"
   on public.reviews for select
@@ -159,8 +152,3 @@ create policy "reviews admin update status"
   with check (
     exists (select 1 from public.profiles p where p.id = auth.uid() and p.role = 'admin')
   );
-
--- 5) Optional storage guidance (bonus)
--- Create a bucket named "review-photos" in Supabase Storage (public or signed).
--- If you keep it private, you should use signed URLs in the app.
-
