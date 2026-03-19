@@ -4,11 +4,11 @@
 
 ## Features
 
-✅ **Browse Local Businesses** - Search, filter by category and location
-✅ **Crowdsourced Reviews** - Users submit reviews with ratings for quality, service, and value
-✅ **Photo Uploads** - Optional photo upload with reviews
-✅ **Admin Dashboard** - Review moderation before publishing
-✅ **Rating Breakdowns** - Overall and category-specific ratings
+**Browse Local Businesses** - Search, filter by category and location
+**Crowdsourced Reviews** - Users submit reviews with ratings for quality, service, and value
+**Photo Uploads** - Optional photo upload with reviews
+**Admin Dashboard** - Review moderation before publishing
+**Rating Breakdowns** - Overall and category-specific ratings
 
 ## Getting Started
 
